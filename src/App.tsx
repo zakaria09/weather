@@ -3,7 +3,6 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import {useQuery} from '@tanstack/react-query';
 import {getCoordinates, getWeather} from './api/weather';
-import {useFormik} from 'formik';
 import {isSameDay, parseISO} from 'date-fns';
 import {CityForecast, DisplayForecast} from './types/forecast';
 import Weather from './components/weather';
