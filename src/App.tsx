@@ -43,7 +43,7 @@ function App() {
     if (status === 'success') setCoord((prev) => ({...prev, success: false}));
   }, [status]);
 
-  console.log(weather, weather?.city?.name);
+  // console.log(weather, weather?.city?.name);
 
   useEffect(() => {
     if (!weather) return;
@@ -59,11 +59,6 @@ function App() {
     }));
     const forecast: any = {};
     days.reduce((prev, current) => {
-      console.log(
-        new Date(prev.dateTime),
-        new Date(current.dateTime),
-        isSameDay(new Date(prev.dateTime), new Date(current.dateTime))
-      );
       if (isSameDay(new Date(prev.dateTime), new Date(current.dateTime))) {
         const {dateTime}: {dateTime: Date} = current;
         const dateKey = new Date(
@@ -84,11 +79,8 @@ function App() {
       forecast: forecast,
     };
 
-    console.log(forecast);
     setForecast(cityForecast);
   }, [weather]);
-
-  console.log(currentForecast);
 
   return (
     <div>
