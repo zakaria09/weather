@@ -11,12 +11,12 @@ import sun from '../assets/icons/sunny.svg';
 import thunder from '../assets/icons/thunder.svg';
 
 export default function WeatherIcon({weather}: {weather: Icons}) {
-  if (weather === 'Rain') return <img src={rainy} />;
-  else if (weather === 'Drizzle') return <img src={drizzle} />;
-  else if (weather === 'Clouds') return <img src={clouds} />;
-  else if (weather === 'Clear') return <img src={sun} />;
-  else if (weather === 'Snow') return <img src={snow} />;
-  else if (weather === 'Thunderstorm') return <img src={thunder} />;
+  if (weather === 'Rain') return <img className='w-24' src={rainy} />;
+  else if (weather === 'Drizzle') return <img className='w-24' src={drizzle} />;
+  else if (weather === 'Clouds') return <img className='w-24' src={clouds} />;
+  else if (weather === 'Clear') return <img className='w-24' src={sun} />;
+  else if (weather === 'Snow') return <img className='w-24' src={snow} />;
+  else if (weather === 'Thunderstorm') return <img className='w-24' src={thunder} />;
   else if (weather === 'Atmosphere') return <FaSmog />;
   else return <BiSolidMessageAltError />;
 }
